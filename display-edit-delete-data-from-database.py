@@ -223,11 +223,18 @@ def query():
 
     print_record = " "
 
-    # logic to display the saved data
+    # logic to display the saved data (just a first and last name), to get all the details apply logic accordingly
     for i in record:
         print_record += str(i[0]) + " " + str(i[1]) + "\t" + str(i[6]) + "\n"
     lbl = Label(root, text=print_record)
     lbl.grid(row=11, column=0, columnspan=2)
+
+         """to see your all details including 
+         address, city, state, pincode, etc
+         which you've stored in database 
+         enter ID number of the record in
+         manage_ID entry and click on Edit record
+         you will see all the data you've stored"""
 
     # commit changes
     conn.commit()
